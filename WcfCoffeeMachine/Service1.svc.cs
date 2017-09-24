@@ -12,10 +12,31 @@ namespace WcfCoffeeMachine
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Service1.svc ou Service1.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public string GetData(string value)
         {
-            return string.Format("You entered: {0}", value);
-        }
+            try
+            {
+
+
+                using (var ctx = new ModelCoffeeMachine())
+                {
+                    DrinkKind stud = new WcfCoffeeMachine.DrinkKind() { kind = "BlackCoffee" };
+
+                    ctx.kinds.Add(stud);
+                    ctx.SaveChanges();
+                }
+
+                return string.Format("You entered: {0}", value);
+             }
+
+            catch(Exception ex)
+            {
+                return string.Format("Exception :  {0}", ex.Message);
+
+            }
+            
+            
+            }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {

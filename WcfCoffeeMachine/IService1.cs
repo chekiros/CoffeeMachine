@@ -14,7 +14,8 @@ namespace WcfCoffeeMachine
     {
 
         [OperationContract]
-        string GetData(int value);
+        [WebGet(UriTemplate = "/GetData/{value}")]
+        string GetData(string value);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
