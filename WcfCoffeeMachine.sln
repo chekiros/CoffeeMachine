@@ -5,10 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfCoffeeMachine", "WcfCoffeeMachine\WcfCoffeeMachine.csproj", "{C3971E5E-25C7-404F-A939-E058D0A2BDFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCoffeeMachine", "WebCoffeeMachine\WebCoffeeMachine.csproj", "{1A75EA71-CCAC-44B2-B415-6814ED8E2D27}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfMachineACafé", "WcfMachineACafé\WcfMachineACafé.csproj", "{C4E5C7B2-1AA9-4722-9A35-FB0CF96677F2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
